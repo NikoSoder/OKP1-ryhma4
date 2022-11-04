@@ -68,12 +68,15 @@ nav ul li a:hover {
   color: rgb(199, 204, 209);
 }
 
-/* CAROUSEL */
+/* CAROUSEL IMAGE SLIDER */
 
-/* Carousel container */
 .slideshow-container {
   max-width: 800px;
   margin: auto;
+}
+
+.slideshow-container figure {
+  text-align: center;
 }
 
 /* Hide the images by default */
@@ -83,7 +86,7 @@ nav ul li a:hover {
 
 .mySlides img {
   max-width: 100%;
-  border-radius: 20px;
+  height: 400px;
 }
 
 /* Fading animation */
