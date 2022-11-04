@@ -1,63 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+* {
+  box-sizing: border-box;
+}
 /* MAIN COLORS Blue #408EC6, Maroon #7A2048, Indigo #1E2761 and white */
 
 /* MOBILE VIEW */
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
+  font-family: "Ubuntu", sans-serif;
 }
 
 /* HEADER */
 
 header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1rem 0 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem 0 1rem;
 }
 
 header figure {
-    display: block;
-    max-width: 100px;
-    margin-right: 2rem;
+  display: block;
+  max-width: 100px;
+  margin-right: 2rem;
 }
 
 header figure img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 header section h1 {
-    font-size: 4rem;
+  font-size: 4rem;
 }
 
 header section h3 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 /* NAV */
 
 nav {
-    background-color: #408EC6;
-    padding: 1rem 0 1rem 1rem;
-    box-shadow: -1px 8px 18px -10px rgba(0,0,0,0.5);
+  background-color: #408ec6;
+  padding: 1rem 0 1rem 1rem;
+  box-shadow: -1px 8px 18px -10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
 }
 
 nav ul {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 nav ul li {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 nav ul li a {
-    font-size: 2rem;
-    color: white;
-    text-decoration: none;
-    display: block;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  display: block;
 }
 
 nav ul li a:hover {
-    color: rgb(199, 204, 209);
+  color: rgb(199, 204, 209);
+}
+
+/* CAROUSEL */
+
+/* Carousel container */
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  max-width: 100%;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
