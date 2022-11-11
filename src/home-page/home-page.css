@@ -11,6 +11,12 @@ html {
   font-family: "Ubuntu", sans-serif;
 }
 
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 0 0.5rem 0 0.5rem;
+}
+
 /* HEADER */
 
 header {
@@ -45,12 +51,12 @@ nav {
   background-color: #408ec6;
   padding: 1rem 0 1rem 1rem;
   box-shadow: -1px 8px 18px -10px rgba(0, 0, 0, 0.5);
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 nav ul {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 nav ul li {
@@ -73,6 +79,7 @@ nav ul li a:hover {
 .slideshow-container {
   max-width: 1000px;
   margin: auto;
+  margin-bottom: 7rem;
   /* box-shadow: 5px 13px 40px -4px rgba(0, 0, 0, 0.75); */
 }
 
@@ -104,3 +111,65 @@ nav ul li a:hover {
     opacity: 1;
   }
 }
+
+main h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* NOW AVAILABLE SECTION  */
+
+.now-available-section {
+}
+
+.now-available-section article {
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid black; */
+  padding: 2rem;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.now-available-section article > * {
+  flex: 1;
+  font-size: 1.5rem;
+}
+
+.now-available-section article figure {
+  display: block;
+}
+
+.now-available-section article figure img {
+  max-width: 100%;
+}
+
+.now-available-section article div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.now-available-section article div a {
+  text-decoration: none;
+  color: white;
+  background-color: #7a2048;
+  padding: 0.5rem 3rem 0.5rem 3rem;
+  border-radius: 10px;
+}
+
+.now-available-section article div p {
+  margin-bottom: 1rem;
+}
+
+/* .band-info {
+  border-left: 1px solid black;
+}
+
+.band-info-second {
+  border-right: 1px solid black;
+} */
