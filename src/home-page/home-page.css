@@ -1,10 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
 * {
   box-sizing: border-box;
 }
 /* MAIN COLORS Blue #408EC6, Maroon #7A2048, Indigo #1E2761 and white */
+/* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
 
 /* MOBILE VIEW */
+
+:root {
+  --bg-color-blue: #408ec6;
+  --bg-color-maroon: #7a2048;
+  --bg-color-indigo: #1e2761;
+  --bg-color-white: #fff;
+}
 
 html {
   font-size: 62.5%;
@@ -42,15 +51,15 @@ header section h3 {
 /* NAV */
 
 nav {
-  background-color: #408ec6;
+  background-color: var(--bg-color-indigo);
   padding: 1rem 0 1rem 1rem;
   box-shadow: -1px 8px 18px -10px rgba(0, 0, 0, 0.5);
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 nav ul {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 nav ul li {
@@ -73,7 +82,7 @@ nav ul li a:hover {
 .slideshow-container {
   max-width: 1000px;
   margin: auto;
-  /* box-shadow: 5px 13px 40px -4px rgba(0, 0, 0, 0.75); */
+  margin-bottom: 7rem;
 }
 
 .slideshow-container figure {
@@ -102,5 +111,74 @@ nav ul li a:hover {
   }
   to {
     opacity: 1;
+  }
+}
+
+main h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #fff;
+}
+
+/* NOW AVAILABLE SECTION  */
+
+.full-width-wrapper {
+  background-color: var(--bg-color-blue);
+  padding: 3rem 0 2rem 0;
+}
+
+.now-available-section {
+  max-width: 800px;
+  margin: auto;
+}
+
+.now-available-section article {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color-white);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.now-available-section article > * {
+  flex: 1;
+  font-size: 1.5rem;
+}
+
+.now-available-section article figure {
+  display: block;
+}
+
+.now-available-section article figure img {
+  max-width: 100%;
+}
+
+.now-available-section article div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.now-available-section article div a {
+  text-decoration: none;
+  color: white;
+  background-color: var(--bg-color-maroon);
+  padding: 0.5rem 4rem 0.5rem 4rem;
+  border-radius: 10px;
+}
+
+.now-available-section article div p {
+  margin-bottom: 1rem;
+}
+
+/* MEDIA QUERYS */
+
+@media only screen and (min-width: 486px) {
+  .now-available-section article {
+    flex-direction: row;
+    margin: 0 1rem 2rem 1rem;
+    border-radius: 5px;
   }
 }
