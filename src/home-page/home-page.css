@@ -1,20 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
 * {
   box-sizing: border-box;
 }
 /* MAIN COLORS Blue #408EC6, Maroon #7A2048, Indigo #1E2761 and white */
+/* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
 
 /* MOBILE VIEW */
+
+:root {
+  --bg-color-blue: #408ec6;
+  --bg-color-maroon: #7a2048;
+  --bg-color-indigo: #1e2761;
+  --bg-color-white: #fff;
+}
 
 html {
   font-size: 62.5%;
   font-family: "Ubuntu", sans-serif;
-}
-
-main {
-  max-width: 800px;
-  margin: auto;
-  padding: 0 0.5rem 0 0.5rem;
 }
 
 /* HEADER */
@@ -48,7 +51,7 @@ header section h3 {
 /* NAV */
 
 nav {
-  background-color: #408ec6;
+  background-color: var(--bg-color-indigo);
   padding: 1rem 0 1rem 1rem;
   box-shadow: -1px 8px 18px -10px rgba(0, 0, 0, 0.5);
   margin-bottom: 4rem;
@@ -80,7 +83,6 @@ nav ul li a:hover {
   max-width: 1000px;
   margin: auto;
   margin-bottom: 7rem;
-  /* box-shadow: 5px 13px 40px -4px rgba(0, 0, 0, 0.75); */
 }
 
 .slideshow-container figure {
@@ -116,22 +118,27 @@ main h1 {
   font-size: 3rem;
   text-align: center;
   margin-bottom: 3rem;
+  color: #fff;
 }
 
 /* NOW AVAILABLE SECTION  */
 
+.full-width-wrapper {
+  background-color: var(--bg-color-blue);
+  padding: 3rem 0 2rem 0;
+}
+
 .now-available-section {
+  max-width: 800px;
+  margin: auto;
 }
 
 .now-available-section article {
   display: flex;
-  flex-direction: row;
-  /* border: 1px solid black; */
+  flex-direction: column;
+  background-color: var(--bg-color-white);
   padding: 2rem;
-  border-radius: 5px;
   margin-bottom: 2rem;
-  /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .now-available-section article > * {
@@ -157,8 +164,8 @@ main h1 {
 .now-available-section article div a {
   text-decoration: none;
   color: white;
-  background-color: #7a2048;
-  padding: 0.5rem 3rem 0.5rem 3rem;
+  background-color: var(--bg-color-maroon);
+  padding: 0.5rem 4rem 0.5rem 4rem;
   border-radius: 10px;
 }
 
@@ -166,10 +173,12 @@ main h1 {
   margin-bottom: 1rem;
 }
 
-/* .band-info {
-  border-left: 1px solid black;
-}
+/* MEDIA QUERYS */
 
-.band-info-second {
-  border-right: 1px solid black;
-} */
+@media only screen and (min-width: 486px) {
+  .now-available-section article {
+    flex-direction: row;
+    margin: 0 1rem 2rem 1rem;
+    border-radius: 5px;
+  }
+}
