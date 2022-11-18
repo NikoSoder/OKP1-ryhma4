@@ -60,7 +60,6 @@ nav {
   background-color: var(--bg-color-indigo);
   padding: 1rem 0 1rem 1rem;
   box-shadow: -1px 8px 18px -10px rgba(0, 0, 0, 0.5);
-  /* margin-bottom: 4rem; */
 }
 
 nav ul {
@@ -88,15 +87,14 @@ nav ul li a:hover {
 .img-slider-full-width-wrapper {
   background-image: url(../images/carousal-bg.jpeg);
   background-size: cover;
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .slideshow-container {
   max-width: 1000px;
   margin: auto;
   padding: 5rem 0 5rem 0;
-  /* margin-bottom: 7rem; */
 }
 
 .slideshow-container figure {
