@@ -28,6 +28,10 @@ header {
   justify-content: center;
   align-items: center;
   padding: 0 1rem 0 1rem;
+  background-image: url(../images/header-bg.jpeg);
+  background-size: cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
 }
 
 header figure {
@@ -42,10 +46,12 @@ header figure img {
 
 header section h1 {
   font-size: 4rem;
+  color: #fff;
 }
 
 header section h3 {
   font-size: 2.5rem;
+  color: #fff;
 }
 
 /* NAV */
@@ -54,7 +60,6 @@ nav {
   background-color: var(--bg-color-indigo);
   padding: 1rem 0 1rem 1rem;
   box-shadow: -1px 8px 18px -10px rgba(0, 0, 0, 0.5);
-  margin-bottom: 4rem;
 }
 
 nav ul {
@@ -79,10 +84,17 @@ nav ul li a:hover {
 
 /* CAROUSEL IMAGE SLIDER */
 
+.img-slider-full-width-wrapper {
+  background-image: url(../images/carousal-bg.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .slideshow-container {
   max-width: 1000px;
   margin: auto;
-  margin-bottom: 7rem;
+  padding: 5rem 0 5rem 0;
 }
 
 .slideshow-container figure {
