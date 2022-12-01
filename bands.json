@@ -1,0 +1,18 @@
+{
+  "bands": [
+    {
+      "id": 0,
+      "name": "rammstein",
+      "image": "./src/images/rammstein.png",
+      "price": 50,
+      "description": "Rammstein is coming to Finland"
+    },
+    {
+      "id": 1,
+      "name": "ironmaiden",
+      "image": "./src/images/ironmaiden.png",
+      "price": 30,
+      "description": "Iron Maiden is coming to Finland"
+    }
+  ]
+}

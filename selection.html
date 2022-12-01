@@ -4,15 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tickets online</title>
-    <link rel="stylesheet" href="../reset.css" />
-    <link rel="stylesheet" href="./buy-tickets.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/buy-tickets-page/buy-tickets.css" />
+    <style>
+      #img {
+        max-width: 200px;
+      }
+    </style>
   </head>
   <body>
     <!-- HEADER -->
     <header>
       <figure>
-        <img src="../images/company-logo.png" alt="Company logo" />
+        <img src="" alt="Company logo" />
       </figure>
       <section>
         <h1>Company</h1>
@@ -31,9 +35,9 @@
     <!-- IMAGE AND DESCRIBE -->
     <section class="concert">
       <figure>
-        <img src="" alt="Some Photo" />
+        <img id="img" src="" alt="Some Photo" />
       </figure>
-      <p>
+      <p id="description">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
         impedit reiciendis, autem rem fugit vel enim, fugiat a obcaecati
         voluptates quidem temporibus quis hic repudiandae molestiae atque
@@ -88,8 +92,24 @@
           <label for="phone">Phone number</label>
         </div>
 
-        <h2>TOTAL <span id="total">0$</span></h2>
+        <h2>TOTAL <span id="total"></span></h2>
       </form>
     </section>
+    <script>
+      async function loadCity() {
+        let data = await fetch("./bands.json").then((response) =>
+          response.json()
+        );
+        let url = new URL(window.location.href);
+        let description = document.getElementById("description");
+        let bandId = url.searchParams.get("id");
+        const img = document.getElementById("img");
+        const total = document.getElementById("total");
+        img.src = data.bands[bandId].image;
+        description.textContent = data.bands[bandId].description;
+        total.textContent = data.bands[bandId].price + "€";
+      }
+      loadCity();
+    </script>
   </body>
 </html>
