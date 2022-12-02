@@ -14,3 +14,11 @@ function SlideShow() {
   slides[slidePosition - 1].style.display = "block";
   setTimeout(SlideShow, 6000); // Change image every 2 seconds
 }
+
+function selectBand(id) {
+  let redirect = new URL(
+    `${window.location.origin}/src/buy-tickets-page-second/buy-tickets-page-second.html`
+  );
+  redirect.searchParams.append("id", id);
+  window.location.href = redirect.href;
+}
