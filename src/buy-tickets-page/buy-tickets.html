@@ -29,67 +29,79 @@
     </nav>
 
     <!-- IMAGE AND DESCRIBE -->
-    <section class="concert">
-      <figure>
-        <img src="" alt="Some Photo" />
-      </figure>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-        impedit reiciendis, autem rem fugit vel enim, fugiat a obcaecati
-        voluptates quidem temporibus quis hic repudiandae molestiae atque
-        explicabo veritatis eaque facilis facere! Repellendus perspiciatis
-        fugiat rem veritatis facilis est soluta deleniti excepturi magnam, quam
-        error assumenda, doloremque placeat commodi nam.
-      </p>
-    </section>
+        <section class="concert">
+            <figure>
+                <img src="" alt="Some Photo">
+            </figure>
+            <p >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Possimus impedit reiciendis, autem rem fugit vel enim, 
+                fugiat a obcaecati voluptates quidem temporibus quis hic 
+                repudiandae molestiae atque explicabo veritatis eaque facilis facere!
+                Repellendus perspiciatis fugiat rem veritatis facilis est soluta 
+                deleniti excepturi magnam, quam error assumenda, doloremque placeat commodi nam.
+            </p>
+        </section>
     <!-- TICKETS CHOOSE -->
 
     <section class="tickets-choose">
-      <table></table>
-      <h2></h2>
-      <table></table>
+     <table>
+      <tbody>
+        <tr>
+          <td rowspan="2">Event's name</td>
+          <td rowspan="2">Price</td>
+          <td><button>+</button></td>
+          <td rowspan="2"><span>0</span>€</td>
+        </tr>
+        <tr>
+          <td><button>-</button></td>
+        </tr>
+
+      </tbody>
+     </table>
+  
     </section>
 
     <!-- CONTACT INFORMATION -->
     <section class="contact__information">
       <form action="">
         <div class="group">
-          <input type="text" placeholder="Name" required />
+          <input type="text" placeholder="Name" required>
           <label for="fname">Name</label>
         </div>
 
         <div class="group">
-          <input type="text" required />
+          <input type="text" placeholder="Surname" required>
           <label for="sname">Surname</label>
         </div>
 
+
         <div class="group">
-          <input type="text" required />
+          <input type="text" placeholder="E-mail" required>
           <label for="e-mail">E-mail</label>
         </div>
 
         <div class="group">
-          <input type="text" required />
+          <input type="text" placeholder="Address" required>
           <label for="adress">Adress</label>
         </div>
 
         <div class="group">
-          <input type="text" required />
+          <input type="text" placeholder="City" required>
           <label for="city">City</label>
         </div>
 
         <div class="group">
-          <input type="text" required />
+          <input type="text" placeholder="Country" required>
           <label for="country">Country</label>
         </div>
 
         <div class="group">
-          <input type="phone" required />
+          <input type="phone" placeholder="Phone number" required>
           <label for="phone">Phone number</label>
         </div>
-
-        <h2>TOTAL <span id="total">0$</span></h2>
       </form>
+      <hr>
+      <h2>TOTAL <span id="total">0</span>€</h2>
     </section>
-  </body>
-</html>
+

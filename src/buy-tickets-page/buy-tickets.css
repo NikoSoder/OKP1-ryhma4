@@ -82,14 +82,27 @@ nav ul li a:hover {
   color: rgb(199, 204, 209);
 }
 
+/* PAGE STYLES */
+
+hr{
+  border: #408ec6 solid 1px;
+}
 
 .contact__information{
-  margin: auto;
+  margin: 2rem auto;
   border: 1px solid #bebebe;
   border-radius: 10px;
   width: 80%;
   padding: 2rem;
   position:relative; 
+  
+}
+.contact__information h2{
+  float: right;
+  margin-right: 2rem;
+  color: #408ec6;
+  font-weight: 900;
+
 }
 
 .contact__information form{
@@ -107,6 +120,8 @@ nav ul li a:hover {
   border: none;
   border-bottom: 2px solid #bebebe;
 }
+
+
 input:focus{
   outline: none;
 }
@@ -114,9 +129,41 @@ label{
   display: none;
 }
 
+tr{
+  border:1px solid #bebebe;
+}
+
+td{
+  border: 1px solid #bebebe;
+  text-align: center;
+  vertical-align: middle;
+}
+td[rowspan = "2"]{
+  padding: 0 1rem;
+}
+
+td:not([rowspan = "2"]){
+width: 20px;
+min-width: 20px;
+}
+
+td button{
+  border: none;
+  text-align: center;
+  color: #408ec6;
+  background-color: inherit;
+  text-align: center;
+  text-decoration: none;
+  padding: 0;
+}
+
+/* TABLET VERSION */
 @media  screen and (min-width: 426px) {
+  .contact__information{
+    max-width: 50%;
+  }
+
   input:focus 		{ outline:none; }
-  
   label{
     display: block;
     color:#999; 
