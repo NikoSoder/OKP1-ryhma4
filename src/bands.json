@@ -17,35 +17,35 @@
     {
       "id": 2,
       "name": "apulanta",
-      "image": "../images/ironmaiden.png",
+      "image": "../images/apulanta.png",
       "price": 34,
       "description": "Apulanta is a Finnish rock band, founded in 1991 when its members were in their mid-teens. In September 2009, Apulanta members established an independent label, Päijät-Hämeen Sorto ja Riisto (Päijänne Tavastian Oppression and Exploitation). Since its beginnings, the label has so far gotten one artist, pop singer Kaija Koo in the summer of 2010. In February 2011, they revealed that they had a new prospective artist in the label, though not disclosing their name."
     },
     {
       "id": 3,
       "name": "darude",
-      "image": "../images/ironmaiden.png",
+      "image": "../images/darude.png",
       "price": 43,
       "description": "Toni-Ville Henrik Virtanen born July 17, 1975), better known by his stage name Darude. His music is characterised by its progressive/uplifting style. He started making music in 1995 and released the platinum-selling."
     },
     {
       "id": 4,
       "name": "eppu normaali",
-      "image": "../images/ironmaiden.png",
+      "image": "../images/eppunormaali.png",
       "price": 22,
       "description": "Eppu Normaali is one of the most popular rock bands in Finland. The band formed in 1976 in Ylöjärvi, a small town near Tampere. The band is the best-selling music artist in Finland, with certified sales of nearly two million records,[1] and it has also gained success especially in the use of the Finnish language in rock lyrics. In addition to their studio albums, Eppu Normaali also released live records, DVDs, and over 20 singles."
     },
     {
       "id": 5,
       "name": "happoradio",
-      "image": "../images/ironmaiden.png",
+      "image": "../images/happoradio.png",
       "price": 25,
       "description": "Happoradio (Finnish for Acid Radio) is a Finnish rock band formed in 2001. They achieved their first success with the single Pois Kalliosta (2003). Tavikset, Che Guevara, Ahmat tulevat and Pelastaja are some of their other hits in the Scandinavian market."
     },
     {
-      "id": 1,
+      "id": 6,
       "name": "hanoi rocks",
-      "image": "../images/ironmaiden.png",
+      "image": "../images/hanoirocks.jpeg",
       "price": 30,
       "description": "Hanoi Rocks was a Finnish rock band formed in 1979. They were the first Finnish band to chart in the UK and they were also popular in Japan. The band broke up in June 1985 after drummer Nicholas Razzle Dingley died in a drunk driving accident with Vince Neil behind the wheel during their first US tour in December 1984. After their initial break-up, Michael Monroe was the first Finnish artist to chart on the American Billboard 200 in 1989. Original vocalist Michael Monroe and guitarist Andy McCoy reunited in 2001 with a new lineup that lasted until 2009. Although musically closer to traditional rock n' roll and punk, the band have been cited as a major influence in the glam metal genre for bands such as Guns N' Roses, Skid Row and Poison."
     }
