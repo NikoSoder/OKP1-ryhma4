@@ -29,27 +29,43 @@
     </nav>
 
     <!-- IMAGE AND DESCRIBE -->
-        <section class="concert">
-            <figure>
-                <img src="" alt="Some Photo">
-            </figure>
-            <p >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Possimus impedit reiciendis, autem rem fugit vel enim, 
-                fugiat a obcaecati voluptates quidem temporibus quis hic 
-                repudiandae molestiae atque explicabo veritatis eaque facilis facere!
-                Repellendus perspiciatis fugiat rem veritatis facilis est soluta 
-                deleniti excepturi magnam, quam error assumenda, doloremque placeat commodi nam.
-            </p>
-        </section>
+    <section class="concert">
+      <figure>
+        <img id="img" src="" alt="Some Photo" />
+      </figure>
+      <p id="description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+        impedit reiciendis, autem rem fugit vel enim, fugiat a obcaecati
+        voluptates quidem temporibus quis hic repudiandae molestiae atque
+        explicabo veritatis eaque facilis facere! Repellendus perspiciatis
+        fugiat rem veritatis facilis est soluta deleniti excepturi magnam, quam
+        error assumenda, doloremque placeat commodi nam.
+      </p>
+    </section>
     <!-- TICKETS CHOOSE -->
 
     <section class="tickets-choose">
+      <table>
+        <tbody>
+          <td colspan="4" class="options" ><h2>Normal price</h2></td>
+          <tr>
+          <td rowspan="2"><span id="adult-price">0</span>/ticket</td>
+          <td rowspan="2">0 tickets</td>
+          <td><button>+</button></td>
+          <td rowspan="2"><span>0</span>€</td>
+        </tr>
+        <tr>
+          <td><button>-</button></td>
+        </tr>
+      </tbody>
+     </table>
+
      <table>
       <tbody>
+        <td class="options" colspan="4"> <h2>Elders, unempoyments, students</h2></td>
         <tr>
-          <td rowspan="2">Event's name</td>
-          <td rowspan="2">Price</td>
+          <td rowspan="2"><span id="price">0</span>/ticket</td>
+          <td rowspan="2"><span id="count">0</span> tickets</td>
           <td><button>+</button></td>
           <td rowspan="2"><span>0</span>€</td>
         </tr>
@@ -59,7 +75,6 @@
 
       </tbody>
      </table>
-  
     </section>
 
     <!-- CONTACT INFORMATION -->
@@ -102,6 +117,28 @@
         </div>
       </form>
       <hr>
-      <h2>TOTAL <span id="total">0</span>€</h2>
+      <h2>TOTAL <span id="total">0</span></h2>
     </section>
+    
+    <button>Back</button>
 
+    <script>
+      async function loadCity() {
+        let data = await fetch("../bands.json").then((response) =>
+          response.json()
+        );
+        let url = new URL(window.location.href);
+        let description = document.getElementById("description");
+        let bandId = url.searchParams.get("id");
+        const img = document.getElementById("img");
+        const price = document.getElementById("price");
+        const adultPrice = document.getElementById("adult-price")
+
+        img.src = data.bands[bandId].image;
+        description.textContent = data.bands[bandId].description;
+        price.textContent = data.bands[bandId].price + "€";
+        adultPrice.textContent = data.bands[bandId].adultprice + "€";
+      }
+      loadCity();
+    </script>
+</body>
