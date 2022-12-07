@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tickets online</title>
+    <title>Document</title>
     <link rel="stylesheet" href="../reset.css" />
-    <link rel="stylesheet" href="./buy-tickets.css" />
+    <link rel="stylesheet" href="../buy-tickets-page/buy-tickets.css" />
+    <link rel="stylesheet" href="./buy-tickets-page-second.css" />
   </head>
   <body>
     <!-- HEADER -->
@@ -45,83 +46,52 @@
     <!-- TICKETS CHOOSE -->
 
     <section class="tickets-choose">
-      <table>
-        <tbody>
-          <td colspan="4" class="options" ><h2>Normal price</h2></td>
-          <tr>
-          <td rowspan="2"><span id="adult-price">0</span>/ticket</td>
-          <td rowspan="2">0 tickets</td>
-          <td><button>+</button></td>
-          <td rowspan="2"><span>0</span>€</td>
-        </tr>
-        <tr>
-          <td><button>-</button></td>
-        </tr>
-      </tbody>
-     </table>
-
-     <table>
-      <tbody>
-        <td class="options" colspan="4"> <h2>Elders, unempoyments, students</h2></td>
-        <tr>
-          <td rowspan="2"><span id="price">0</span>/ticket</td>
-          <td rowspan="2"><span id="count">0</span> tickets</td>
-          <td><button>+</button></td>
-          <td rowspan="2"><span>0</span>€</td>
-        </tr>
-        <tr>
-          <td><button>-</button></td>
-        </tr>
-
-      </tbody>
-     </table>
+      <table></table>
+      <h2></h2>
+      <table></table>
     </section>
 
     <!-- CONTACT INFORMATION -->
     <section class="contact__information">
       <form action="">
         <div class="group">
-          <input type="text" placeholder="Name" required>
+          <input type="text" placeholder="Name" required />
           <label for="fname">Name</label>
         </div>
 
         <div class="group">
-          <input type="text" placeholder="Surname" required>
+          <input type="text" required />
           <label for="sname">Surname</label>
         </div>
 
-
         <div class="group">
-          <input type="text" placeholder="E-mail" required>
+          <input type="text" required />
           <label for="e-mail">E-mail</label>
         </div>
 
         <div class="group">
-          <input type="text" placeholder="Address" required>
+          <input type="text" required />
           <label for="adress">Adress</label>
         </div>
 
         <div class="group">
-          <input type="text" placeholder="City" required>
+          <input type="text" required />
           <label for="city">City</label>
         </div>
 
         <div class="group">
-          <input type="text" placeholder="Country" required>
+          <input type="text" required />
           <label for="country">Country</label>
         </div>
 
         <div class="group">
-          <input type="phone" placeholder="Phone number" required>
+          <input type="phone" required />
           <label for="phone">Phone number</label>
         </div>
-      </form>
-      <hr>
-      <h2>TOTAL <span id="total">0</span></h2>
-    </section>
-    
-    <button>Back</button>
 
+        <h2>TOTAL <span id="total"></span></h2>
+      </form>
+    </section>
     <script>
       async function loadCity() {
         let data = await fetch("../bands.json").then((response) =>
@@ -131,14 +101,13 @@
         let description = document.getElementById("description");
         let bandId = url.searchParams.get("id");
         const img = document.getElementById("img");
-        const price = document.getElementById("price");
-        const adultPrice = document.getElementById("adult-price")
+        const total = document.getElementById("total");
 
         img.src = data.bands[bandId].image;
         description.textContent = data.bands[bandId].description;
-        price.textContent = data.bands[bandId].price + "€";
-        adultPrice.textContent = data.bands[bandId].adultprice + "€";
+        total.textContent = data.bands[bandId].price + "€";
       }
       loadCity();
     </script>
-</body>
+  </body>
+</html>

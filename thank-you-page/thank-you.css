@@ -38,7 +38,7 @@ header section h3 {
 /* NAVIGATION */
 
 nav {
-	background-color: #408EC6;
+	background-color: #1E2761;
 	padding: 1rem 0 1rem 1rem;
 	box-shadow: 0 5px 5px -0 rgba(0, 0, 0, 0.5);
 	/* box-shadow: -1px 8px 18px -10px rgba(0,0,0,0.5); */
@@ -67,7 +67,7 @@ nav ul li a:hover {
 /* MAIN */
 
 main {
-	font-size: 1.3rem;
+	font-size: 2rem;
 	text-align: center;
 	margin: 20px 0px;
 	padding: 20px;
@@ -98,7 +98,7 @@ button {
 
 .about * {
 	text-align: center;
-	font-size: 1.3rem;
+	font-size: 1.5rem;
 }
 
 .about {
@@ -117,7 +117,7 @@ button {
 footer {
 	display: flex;
 	justify-content: space-between;
-	font-size: 1.3rem;
+	font-size: 1.5rem;
 	background-color: #1E2761;
 	padding: 40px 10px;
 	color: white;
@@ -147,4 +147,11 @@ footer i:hover {
 	transform: translateY(5px);
 	transition: all 0.3s;
 	cursor: pointer;
+}
+
+@media only screen and (min-width: 486px) {
+	nav ul {
+		justify-content: flex-start;
+	}
+}
 }
