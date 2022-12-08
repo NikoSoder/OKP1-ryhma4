@@ -179,6 +179,10 @@ button:hover {
   .total-container {
     padding: 1rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .inf {
     padding-top: 1rem;
@@ -187,5 +191,9 @@ button:hover {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+  }
+
+  .inf h4 {
+    font-size: 2rem;
   }
 }
