@@ -90,6 +90,7 @@ main {
 
 article {
   display: flex;
+
   margin: 1rem;
   margin-bottom: 2rem;
   font-size: medium;
@@ -100,6 +101,14 @@ article {
 
 figure {
   padding: 0.4rem;
+  display: block;
+  max-width: 150px;
+  display: flex;
+  background-color: #fff;
+}
+
+figure img {
+  max-width: 100%;
 }
 
 .inf {
@@ -124,6 +133,10 @@ button {
   transition: all 0.5s;
   cursor: pointer;
   height: 100%;
+}
+
+button:hover {
+  background-color: #92134d;
 }
 
 .buttontext::before {
@@ -169,5 +182,10 @@ button {
   }
   .inf {
     padding-top: 1rem;
+    padding-left: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
   }
 }
