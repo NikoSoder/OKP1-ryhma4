@@ -9,7 +9,6 @@
 	<title>Thank you for order</title>
 	<link rel="stylesheet" href="../reset.css">
 	<link rel="stylesheet" href="../thank-you-page/thank-you.css">
-
 </head>
 
 <body>
@@ -25,30 +24,40 @@
 
 	<nav>
 		<ul>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Contact</a></li>
+			<li><a href="../home-page/index.html">Home</a></li>
+			<li><a href="../about-page/about-page.html">About</a></li>
+			<li><a href="../contact-page/contact-page.html">Contact</a></li>
 		</ul>
 	</nav>
 
 	<main>
 		<h3>Thank you!!!</h3>
 		<h3>Please check your e-mail</h3>
-		<button>Continue to homepagae</button>
+		<button onclick="document.location='../home-page/index.html'">Continue to homepage <span id="time"></span></button>
+		<script>
+			var i = 30;//time
+			function time() {
+				document.getElementById("time").innerHTML = i;//counter
+				i--;//counter minus 1
+				if (i < 0) location.href = "../home-page/index.html";//redirect
+			}
+			time();
+			setInterval(time, 1000);
+		</script>
 	</main>
 
-	<section class="about">
+	<section class=" about">
 		<h3>About us</h3>
 		<p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-		<p>Velit blanditiis ut nemo! Lorem ipsum dolor sit an amet.</p>
+		<p>Velit blanditiis ut nemo! Lorem ipsum dolor sit an <a href="../about-page/about-page.html">amet ...</a></p>
 	</section>
 
 	<footer>
 		<p>Copyright @ 2022</p>
 		<ul>
-			<li><i class="fa-brands fa-facebook-f"></i></li>
-			<li><i class="fa-brands fa-instagram"></i></li>
-			<li><i class="fa-brands fa-twitter"></i></li>
+			<li><a href="http://facebook.com" style="color: white"><i class="fa-brands fa-facebook-f"></i></a></li>
+			<li><a href="http://instagram.com" style="color: white"><i class="fa-brands fa-instagram"></i></a></li>
+			<li><a href="http://twitter.com" style="color: white"><i class="fa-brands fa-twitter"></i></a></li>
 		</ul>
 	</footer>
 

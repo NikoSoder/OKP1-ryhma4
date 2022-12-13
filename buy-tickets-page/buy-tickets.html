@@ -7,6 +7,7 @@
     <title>Tickets online</title>
     <link rel="stylesheet" href="../reset.css" />
     <link rel="stylesheet" href="./buy-tickets.css" />
+    <script src="https://kit.fontawesome.com/ecf5de3203.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <!-- HEADER -->
@@ -22,9 +23,9 @@
     <!-- NAV -->
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="/src/home-page/index.html" id="home">Home</a></li>
+        <li><a href="" id="about">About</a></li>
+        <li><a href="" id="contact">Contact</a></li>
       </ul>
     </nav>
 
@@ -43,16 +44,16 @@
       </p>
     </section>
     <!-- TICKETS CHOOSE -->
-
+    <div class="buy-tickets-tc-ci">
     <section class="tickets-choose">
       <table>
         <tbody>
           <td colspan="4" class="options" ><h2>Normal price</h2></td>
           <tr>
           <td rowspan="2"><span id="adult-price">0</span>/ticket</td>
-          <td rowspan="2">0 tickets</td>
+          <td rowspan="2"><span id="count">0</span> tickets</td>
           <td><button>+</button></td>
-          <td rowspan="2"><span>0</span>€</td>
+          <td rowspan="2"><span id="sum">0</span>€</td>
         </tr>
         <tr>
           <td><button>-</button></td>
@@ -67,7 +68,7 @@
           <td rowspan="2"><span id="price">0</span>/ticket</td>
           <td rowspan="2"><span id="count">0</span> tickets</td>
           <td><button>+</button></td>
-          <td rowspan="2"><span>0</span>€</td>
+          <td rowspan="2"><span id="sum">0</span>€</td>
         </tr>
         <tr>
           <td><button>-</button></td>
@@ -119,8 +120,13 @@
       <hr>
       <h2>TOTAL <span id="total">0</span></h2>
     </section>
-    
-    <button>Back</button>
+  </div>
+  <div class="back">
+    <i class="fa-solid fa-angle-left"></i>
+    <button class="back-button" id="backButton">Back</button>
+  </div>
+
+
 
     <script>
       async function loadCity() {
@@ -133,11 +139,22 @@
         const img = document.getElementById("img");
         const price = document.getElementById("price");
         const adultPrice = document.getElementById("adult-price")
+        const backBTN = document.getElementById("backButton");
+        const home = document.getElementById("home");
+        
 
         img.src = data.bands[bandId].image;
         description.textContent = data.bands[bandId].description;
         price.textContent = data.bands[bandId].price + "€";
         adultPrice.textContent = data.bands[bandId].adultprice + "€";
+        
+        backBTN.addEventListener('click', function(){
+          window.history.back();
+        });
+        home.addEventListener('click', function(){
+          let redirect = new URL(`${window.location.origin}/src/home-page/index.html`);
+          window.location.href = redirect.href;
+        });
       }
       loadCity();
     </script>

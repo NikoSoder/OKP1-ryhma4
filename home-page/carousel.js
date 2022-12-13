@@ -19,6 +19,6 @@ function selectBand(id) {
   let redirect = new URL(
     `${window.location.origin}/src/buy-tickets-page/buy-tickets.html`
   );
-  redirect.searchParams.append("id", id);
+  redirect.searchParams.append("id", id); 
   window.location.href = redirect.href;
 }

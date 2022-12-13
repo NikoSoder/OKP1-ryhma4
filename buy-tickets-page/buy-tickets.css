@@ -99,22 +99,25 @@ nav ul li a:hover {
 
 .concert figure img {
   max-width: 100%;
+  width: 85%;
 }
 
 #description {
   line-height: 1.6;
-  max-width: 700px;
+  /* max-width: 700px; */
+  width: 85%;
 }
 
 
 /* PAGE STYLES */
+
 
 hr{
   border: #408ec6 solid 1px;
 }
 
 .contact__information{
-  margin: 2rem auto;
+  margin: 2rem auto 0;
   border: 1px solid #bebebe;
   border-radius: 10px;
   width: 80%;
@@ -207,6 +210,23 @@ td button{
   font-size: 2.5rem;
 }
 
+.back{
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+.back-button{
+  border: none;
+  color: #999;
+  background-color: inherit;
+  padding: 0;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+i{
+  padding: 1rem 0 1rem 1rem;
+  color: #999;
+}
+
 /* TABLET VERSION */
 @media  screen and (min-width: 426px) {
   .contact__information{
@@ -245,6 +265,13 @@ td button{
    opacity: 0;
   }
 
+  .buy-tickets-tc-ci{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .buy-tickets-tc-ci > *{
+    flex-grow: 1;
+  }
   
 }  
 

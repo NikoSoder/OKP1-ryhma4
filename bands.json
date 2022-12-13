@@ -55,6 +55,14 @@
       "price": 30,
       "adultprice": 49,
       "description": "Hanoi Rocks was a Finnish rock band formed in 1979. They were the first Finnish band to chart in the UK and they were also popular in Japan. The band broke up in June 1985 after drummer Nicholas Razzle Dingley died in a drunk driving accident with Vince Neil behind the wheel during their first US tour in December 1984. After their initial break-up, Michael Monroe was the first Finnish artist to chart on the American Billboard 200 in 1989. Original vocalist Michael Monroe and guitarist Andy McCoy reunited in 2001 with a new lineup that lasted until 2009. Although musically closer to traditional rock n' roll and punk, the band have been cited as a major influence in the glam metal genre for bands such as Guns N' Roses, Skid Row and Poison."
+    },
+    {
+      "id": 7,
+      "name": "the beatles",
+      "image": "../images/beatles.svg.png",
+      "price": 33,
+      "adultprice": 52,
+      "description": "The Beatles were an English rock band, formed in Liverpool in 1960, that comprised John Lennon, Paul McCartney, George Harrison and Ringo Starr. They are regarded as the most influential band of all time and were integral to the development of 1960s counterculture and popular music's recognition as an art form. Rooted in skiffle, beat and 1950s rock 'n' roll, their sound incorporated elements of classical music and traditional pop in innovative ways. The band also explored music styles ranging from folk and Indian music to psychedelia and hard rock. As pioneers in recording, songwriting and artistic presentation, the Beatles revolutionised many aspects of the music industry and were often publicised as leaders of the era's youth and sociocultural movements."
     }
   ]
 }
