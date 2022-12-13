@@ -92,7 +92,8 @@ button {
   background-color: #7A2048;
   color: white;
   cursor: pointer;
-  /* border: none; */
+  border: none;
+  font: 300 15px 'ubuntu';
 }
 
 button:hover {
