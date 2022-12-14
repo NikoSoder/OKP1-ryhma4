@@ -145,7 +145,7 @@ main h1 {
 .full-width-wrapper {
   background-color: var(--bg-color-blue);
   padding: 3rem 0 2rem 0;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .now-available-section {
@@ -209,7 +209,7 @@ main h1 {
 .no-plans-section {
   text-align: center;
   font-size: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 
 .no-plans-section p {
@@ -226,6 +226,42 @@ main h1 {
 
 .no-plans-section a:hover {
   background-color: #92134d;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  background-color: #1e2761;
+  padding: 40px 10px;
+  color: white;
+  box-shadow: 0 5px 5px -0 rgba(0, 0, 0, 0.5);
+}
+
+footer p {
+  margin-left: 20px;
+}
+
+footer ul {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+footer li {
+  padding-left: 13px;
+}
+
+footer i {
+  font-size: medium;
+}
+
+footer i:hover {
+  transform: translateY(5px);
+  transition: all 0.3s;
+  cursor: pointer;
 }
 
 /* MEDIA QUERYS */
