@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/ecf5de3203.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <!-- HEADER -->
+    <!------------------------- * HEADER * ------------------------------------->
     <header>
       <figure>
         <img src="../images/company-logo.png" alt="Company logo" />
@@ -20,7 +20,7 @@
         <h3>Tickets online</h3>
       </section>
     </header>
-    <!-- NAV -->
+    <!--------------------------- * NAV * --------------------------------------->
     <nav>
       <ul>
         <li><a href="../home-page/index.html" id="home">Home</a></li>
@@ -29,7 +29,7 @@
       </ul>
     </nav>
     
-    <!-- IMAGE AND DESCRIBE -->
+    <!-------------------- * IMAGE AND DESCRIBE * -------------------->
     <div class="container">
 
       <section class="concert">
@@ -45,7 +45,7 @@
           error assumenda, doloremque placeat commodi nam.
         </p>
       </section>
-      <!-- TICKETS CHOOSE -->
+      <!-------------------- * TICKETS CHOOSE * --------------------------->
       <div class="buy-tickets-tc-ci">
       <section class="tickets-choose">
         <table>
@@ -56,11 +56,11 @@
               <tr>
             <td colspan="1" rowspan="2" class="price-width"><span id="adult-price"></span>€/ticket</td>
             <td colspan="1" rowspan="2" class="ticket-width"><span value="0" id="count">0</span> tickets</td>
-            <td><button id="plus" >+</button></td>
+            <td><button id="plusA" >+</button></td>
             <td rowspan="2" class="sum-width"><span id="sum">0</span>€</td>
           </tr>
           <tr>
-            <td><button id="minus" >-</button></td>
+            <td><button id="minusA" >-</button></td>
           </tr>
         </tbody>
        </table>
@@ -70,19 +70,19 @@
           <td class="options" colspan="4"> <h2>Elders, unempoyments, students</h2></td>
           <tr>
             <td rowspan="2" class="price-width"><span id="price">0</span>€/ticket</td>
-            <td rowspan="2" class="ticket-width"><span id="count">0</span> tickets</td>
-            <td><button >+</button></td>
-            <td rowspan="2" class="sum-width"><span id="sum">0</span>€</td>
+            <td rowspan="2" class="ticket-width"><span id="countP">0</span> tickets</td>
+            <td><button id="plusP">+</button></td>
+            <td rowspan="2" class="sum-width"><span id="sumP">0</span>€</td>
           </tr>
           <tr>
-            <td><button>-</button></td>
+            <td><button id="minusP">-</button></td>
           </tr>
   
         </tbody>
        </table>
       </section>
   
-      <!-- CONTACT INFORMATION -->
+      <!---------------- * CONTACT INFORMATION * ----------------------->
       <section class="contact__information">
         <form action="">
           <div class="group">
@@ -122,73 +122,31 @@
           </div>
         </form>
         <hr>
-        <h2>TOTAL <span id="total">0</span>€</h2>
+        <h2>TOTAL <span id="total">0</span></h2>
       </section>
     </div>
     <div class="back">
       <i class="fa-solid fa-angle-left"></i>
       <button class="back-button" id="backButton">Back</button>
     </div>
-    <button class="pay-button" type="submit" > Confirm order & pay</button>
-    </div>
+      <button class="pay-button" type="submit" id="confirmBtn">Confirm order & pay</button>
+   
 
-
-
-    <script>
-      async function loadCity() {
-        let data = await fetch("../bands.json").then((response) =>
-          response.json()
-        );
-        let url = new URL(window.location.href);
-        let description = document.getElementById("description");
-        let bandId = url.searchParams.get("id");
-        const img = document.getElementById("img");
-        const price = document.getElementById("price");
-        const adultPrice = document.getElementById("adult-price")
-        const backBTN = document.getElementById("backButton");
-        const plusBTN = document.getElementById("plus");
-        const minusBTN = document.getElementById("minus");
-        const total = document.getElementById("total");
-
-        let countToNum = parseInt(document.getElementById("count").innerHTML)
-        const countID = document.getElementById("count");
-        let summary = document.getElementById("sum");
-        let priceA = data.bands[bandId].adultprice;
-
-        img.src = data.bands[bandId].image;
-        description.textContent = data.bands[bandId].description;
-        price.textContent = data.bands[bandId].price;
-        adultPrice.textContent = data.bands[bandId].adultprice;
-        
-        backBTN.addEventListener('click', function(){
-          window.history.back();
-        });
-        
-        plusBTN.addEventListener('click', function(){
-        let sum = 0;
-        countToNum += 1;
-        countID.innerHTML = countToNum;
-        sum = priceA * countToNum;
-        summary.textContent = sum;
-        total.innerHTML = summary.innerHTML;
-        });
-
-        minusBTN.addEventListener('click', function(){
-        let sum = 0;
-        if (countToNum != 0)
-        {
-          countToNum -= 1;
-        }
-        countID.innerHTML = countToNum;
-        sum = priceA * countToNum;
-        summary.textContent = sum;
-        total.innerHTML = summary.innerHTML;
-        });
-
-      
-
-      }
-      loadCity();
-      
-    </script>
+    <!----------------------------- * FOOTER * ------------------------------>
+    <section class=" about">
+      <h3>About us</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+      <p>Velit blanditiis ut nemo! Lorem ipsum dolor sit an <a href="../about-page/about-page.html">amet ...</a></p>
+    </section>
+  
+    <footer>
+      <p>Copyright @ 2022</p>
+      <ul>
+        <li><a href="http://facebook.com" style="color: white"><i class="fa-brands fa-facebook-f"></i></a></li>
+        <li><a href="http://instagram.com" style="color: white"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="http://twitter.com" style="color: white"><i class="fa-brands fa-twitter"></i></a></li>
+      </ul>
+    </footer>
+  </div>
+    <script src="./buy-ticket.js"></script>
 </body>

@@ -24,11 +24,16 @@
     </header>
      -->
     <main>
+      <div class="container">
+        <div class="container-box">
         <h1 class="titles">Your order </h1>
         <section class="order-menu">
-          <h2 class="event-name order-menu-items"><span>Event name</span> </h2>
-          <h2 class="tickets-title order-menu-items">Tickets <span class="total-tickets-span">x20</span> </h2> 
-          <h2 class="total-price-title order-menu-items">Total: <span class="total-price-span">900$</span> </h2>
+          <h2 class="event-title order-menu-items">Concert of </h2>
+          <h2 class=" event-name order-menu-items"><span id="event-name">Event name</span> </h2>
+          <h2 class="tickets-title order-menu-items">Tickets</h2>
+          <h2 class="order-menu-items total-tickets-span"><span id="countOfTickets">0</span> tickets</h2> 
+          <h2 class="total-price-title order-menu-items">Total:</h2>
+          <h2 class="total-price-span order-menu-items"><span id="total">0</span></h2>
         </section>
 
         <h1 class="titles">Choose your payment method</h1>
@@ -37,6 +42,9 @@
             <section class="saved-card boxes">
                 <input type="radio" name="payment" id="saved-card" value="saved-card" checked onchange="check()">
                 <label for="saved-card">Saved card</label>
+                <figure class="desktop-fig">
+                  <img src="../images/icons8-magnetic-card-100.png" alt="">
+                </figure>
                 <section class="savedcard-flex">
                   <figure>
                       <img class="visa-logo" src="../images/visa.svg" alt="VISA LOGO"> 
@@ -48,6 +56,9 @@
             <section class="new-card boxes">
                 <input type="radio" name="payment" id="new-card" value="new-card" onchange="check()">
                 <label for="new-card">New debit/credit card</label>
+                <figure class="desktop-fig" id="new-card-fig">
+                  <img src="../images/icons8-bank-cards-100.png" alt="">
+                </figure>
                 <section class="new-card__hs" id="hide-section">
                         <input type="text" id="cardnumber"  class="card-number-input long__input" placeholder="Card number" required > 
                         <input type="text" id="exdate"      class="exdate short__input"           placeholder="MM/YY" required>
@@ -60,6 +71,10 @@
             <section class="online-bank boxes">
                 <input type="radio" name="payment" id="online-bank" value="online-bank" onchange="check()">
                 <label for="online-bank">Pay by online bank</label>
+
+                <figure class="desktop-fig" id="online-bank-fig">
+                  <img src="../images/icons8-online-money-transfer-100.png" alt="">
+                </figure>
 
                 <section class="online-bank__hs" id="hide-section2">
                   <section class="online-bank-items">
@@ -77,9 +92,11 @@
               <i class="fa-solid fa-angle-left"></i>
               <button class="back-button" id="backButton">Back</button>
             </div>
-            <button class="pay-button" type="submit" > Confirm order & pay</button>
+            <button onclick="toThankYouPage()" class="pay-button" type="submit" > Confirm order & pay</button>
     </main>
     <footer></footer>
+     </div>
+  </div>
     <script src="./script-pm.js"></script>
   </body>
 </html>
