@@ -283,12 +283,12 @@ i{
 
 
 @media screen and (min-width: 426px) and (max-width:767px) {
-   .container{
+   .container-box{
         max-width: 425px;
         margin: 0 auto;
         background-color: #ffffff;
         border: 1px solid #bebebe;
-        height: 100vh;
+        height: 130vh;
    }
    main{
     background-color:#408ec6;
